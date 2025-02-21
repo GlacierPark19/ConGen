@@ -17,10 +17,4 @@ string returnConsoleLine(){
 
 
 
-int currentStoryLine(){
-    //returns the current line in the "story" file
-    //as an integer
 
-    
-
-}

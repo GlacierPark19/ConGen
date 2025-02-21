@@ -1,6 +1,11 @@
 class storyHandlerClass{
 
     public: 
+
+        storyHandlerClass(){
+            updateStoryLineNumber(0);
+            setIsEndLine(false);
+        }
         //Setters
 
         void updateStoryLineNumber(int storyLine){
@@ -22,6 +27,9 @@ class storyHandlerClass{
         }
         int getPreviousLine(){
             return previousLine;
+        }
+        bool getEndLineStatus(){
+            return isEndLine;
         }
 
 
