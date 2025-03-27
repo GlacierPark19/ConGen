@@ -1,7 +1,4 @@
 #include "./defines.h"
-class ControlModule{
+//TODO Add SteamInput, DirectInput, XInput Support
 
-    string controlType;
-    bool enabled, isControler, isGyro;
-
-};
+//Figure out control schemas to default apply. Remember: This is the ENGINE, not the GAME
