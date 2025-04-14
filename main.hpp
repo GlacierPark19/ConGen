@@ -1,6 +1,9 @@
-
+#ifndef MAIN_HPP
+#define MAIN_HPP
 #include <iostream>
+#include <map>
 #include <string>
-#define CODE_GEN_VERSION 0.1
+std::map <std::string, std::string> loadEngineConfigFile();
 
 
+#endif
