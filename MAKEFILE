@@ -1,0 +1,19 @@
+run:
+	g++ -c main.cpp
+	g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+	./sfml-app
+	clean
+clean:
+	rm -f *.o
+	rm -f sfml-app
+build:
+	g++ -c main.cpp
+link:
+	g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+buildlink:
+	g++ -c main.cpp
+	g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+all:
+	g++ -c main.cpp
+	g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+	./sfml-app

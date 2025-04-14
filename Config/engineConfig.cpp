@@ -1,13 +1,9 @@
-#include "./defines.h"
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <map>
-#include <sstream>
+#include "engineConfig.hpp"
 
-std::map<string, string> loadEngineConfigFile() {
-    std::map<string, string> configOptions;
-    string configFileLocation = "conGenConfig.cfg";
+
+std::map<std::string, std::string> loadEngineConfigFile() {
+    std::map<std::string, std::string> configOptions;
+    std::string configFileLocation = "conGenConfig.cfg";
     std::fstream configFile;
 
     configFile.open(configFileLocation, std::ios::in);
@@ -16,17 +12,17 @@ std::map<string, string> loadEngineConfigFile() {
         return configOptions; // Return an empty map
     }
 
-    string line;
+    std::string line;
     while (std::getline(configFile, line)) {
         // Ignore empty lines
         if (line.empty() || line[0]== '#') continue;
 
         // Find the position of the colon
         size_t delimiterPos = line.find(':');
-        if (delimiterPos != string::npos) {
+        if (delimiterPos != std::string::npos) {
             // Extract CONFIG_OPTION and setting
-            string key = line.substr(0, delimiterPos);
-            string value = line.substr(delimiterPos + 1);
+            std::string key = line.substr(0, delimiterPos);
+            std::string value = line.substr(delimiterPos + 1);
 
             // Trim whitespace from key and value
             key.erase(0, key.find_first_not_of(" \t"));
